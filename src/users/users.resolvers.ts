@@ -1,7 +1,13 @@
+import client from "../client";
+
 const resolvers =  {
     Query: {
-        User: {
-            
+        seeProfile: (_, {username}) => {
+            client.user.findUnique({
+                where: {
+                    username,
+                }
+            })
         }
     },
 };

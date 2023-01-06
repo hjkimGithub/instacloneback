@@ -19,4 +19,7 @@ export default gql`
             password: String!
         ): User
     }
+    type Query {
+        seeProfile(username:String): User
+    }
 `;
