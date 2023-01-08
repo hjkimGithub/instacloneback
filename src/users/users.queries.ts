@@ -1,6 +1,7 @@
 import client from "../client";
+import { Resolvers } from "../types";
 
-const resolvers =  {
+const queries: Resolvers =  {
     Query: {
         seeProfile: (_, {username}) => {
             client.user.findUnique({
@@ -12,4 +13,4 @@ const resolvers =  {
     },
 };
 
-export default resolvers;
+export default queries;
