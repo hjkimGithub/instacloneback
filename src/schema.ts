@@ -4,7 +4,7 @@ import { makeExecutableSchema } from "apollo-server";
 import { Resolvers } from "./types";
 
 const loadedTypes = loadFilesSync(`${__dirname}/**/*.typeDefs.ts`);
-const loadedResolvers = loadFilesSync(`${__dirname}/**/*.{queries,mutations}.ts`);
+const loadedResolvers = loadFilesSync(`${__dirname}/**/*.{queries|mutations}.ts`);
 const typeDefs = mergeTypeDefs(loadedTypes);
 const resolvers = mergeResolvers(loadedResolvers) as Resolvers;
 
