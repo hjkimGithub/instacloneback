@@ -1,18 +1,18 @@
 import { gql } from "apollo-server";
 
 const typeDefs = gql`
-  type CreateAccountResult {
+  type EditProfileResult {
     ok: Boolean!
     error: String
   }
   type Mutation {
-    createAccount(
-      firstName: String!
+    editProfile(
+      firstName: String
       lastName: String
-      username: String!
-      email: String!
-      password: String!
-    ): CreateAccountResult!
+      username: String
+      email: String
+      password: String
+    ): EditProfileResult!
   }
 `;
 
