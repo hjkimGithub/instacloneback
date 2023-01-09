@@ -1,15 +1,14 @@
 import client from "../client";
 import { Resolvers } from "../types";
 
-const queries: Resolvers =  {
+const queries: Resolvers = {
     Query: {
-        seeProfile: (_, {username}) => {
-            client.user.findUnique({
-                where: {
-                    username,
-                }
-            })
-        }
+      seeProfile: (_, { username }) =>
+        client.user.findUnique({
+          where: {
+            username,
+          },
+        }),
     },
 };
 

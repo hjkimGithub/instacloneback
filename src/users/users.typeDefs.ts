@@ -1,6 +1,6 @@
 import { gql } from "apollo-server";
 
-export default gql`
+const typeDefs =  gql`
     type User {
         id: String!
         firstName: String!
@@ -23,3 +23,5 @@ export default gql`
         seeProfile(username:String): User
     }
 `;
+
+export default typeDefs;
