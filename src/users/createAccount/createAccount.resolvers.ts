@@ -1,8 +1,7 @@
 import bcrypt from "bcrypt";
-import client from "../client";
-import { Resolvers } from "../types";
+import client from "../../client";
 
-const mutations:Resolvers = {
+export default {
   Mutation: {
     createAccount: async (
       _,
@@ -25,7 +24,7 @@ const mutations:Resolvers = {
           throw new Error("This username/password is already taken.");
         }
         const uglyPassword = await bcrypt.hash(password, 10);
-        return client.user.create({
+        await client.user.create({
           data: {
             username,
             email,
@@ -34,11 +33,15 @@ const mutations:Resolvers = {
             password: uglyPassword,
           },
         });
+        return {
+          ok: true,
+        };
       } catch (e) {
-        return e;
+        return {
+          ok: false,
+          error: "Cant create account.",
+        };
       }
     },
   },
 };
-
-export default mutations;

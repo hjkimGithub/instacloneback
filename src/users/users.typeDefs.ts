@@ -10,18 +10,6 @@ const typeDefs =  gql`
         createdAt: String!
         updatedAt: String!
     }
-    type Mutation {
-        createAccout(
-            firstName: String!
-            lastName: String
-            username: String!
-            email: String!
-            password: String!
-        ): User
-    }
-    type Query {
-        seeProfile(username:String): User
-    }
 `;
 
 export default typeDefs;
