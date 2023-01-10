@@ -5,8 +5,8 @@
 - [x] Create Account
 - [x] See Profile
 - [x] Change Avatar(Image Upload)
-- [ ] Login
-- [ ] Edit Profile
+- [x] Login
+- [x] Edit Profile
 - [ ] Follow User
 - [ ] Unfollow User
 - [ ] Search Users
