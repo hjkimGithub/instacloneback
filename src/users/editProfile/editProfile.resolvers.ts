@@ -1,11 +1,11 @@
-import jwt from "jsonwebtoken";
+import fs from "fs";
 import bcrypt from "bcrypt";
 import client from "../../client";
 import { protectedResolver } from "../users.utils";
 
 const resolverFn = async (
   _,
-  { firstName, lastName, username, email, password: newPassword },
+  { firstName, lastName, username, email, password: newPassword, bio },
   {loggedInUser, protectedResolver}
 ) => {
   // console.log(loggedInUser)
@@ -19,6 +19,15 @@ const resolverFn = async (
   //    id: ~~
   //    iat: ~~~
   // }
+
+  // const {filename, createReadStream} = await avatar;
+  // console.log(filename, createReadStream)
+  // const readStream = createReadStream();
+
+  // temporary, when we use aws, not needed
+  // const writeStream = fs.createWriteStream(process.cwd() + "/uploads/" + filename);
+  // readStream.pipe(writeStream);
+
   let uglyPassword = null;
   if (newPassword) {
     uglyPassword = await bcrypt.hash(newPassword, 10);
@@ -33,6 +42,7 @@ const resolverFn = async (
       username,
       email,
       ...(uglyPassword && { password: uglyPassword }),
+      bio,
     },
   });
   if (updatedUser.id) {
