@@ -7,11 +7,11 @@
 - [x] Change Avatar(Image Upload)
 - [x] Login
 - [x] Edit Profile
-- [ ] Follow User
-- [ ] Unfollow User
+- [x] Follow User
+- [x] Unfollow User
+- [ ] See Followers && Following w/ Pagination
+- [ ] Computed Fields
 - [ ] Search Users
-- [ ] See Followers
-- [ ] See Following
 
 ## Photos
 
