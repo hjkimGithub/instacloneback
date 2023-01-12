@@ -9,7 +9,8 @@
 - [x] Edit Profile
 - [x] Follow User
 - [x] Unfollow User
-- [ ] See Followers && Following w/ Pagination
+- [x] See Followers w/ Pagination(offset)
+- [x] See Followings w/ Pagination(cursor based)
 - [ ] Computed Fields
 - [ ] Search Users
 
