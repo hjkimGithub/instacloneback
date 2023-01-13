@@ -11,8 +11,8 @@
 - [x] Unfollow User
 - [x] See Followers w/ Pagination(offset)
 - [x] See Followings w/ Pagination(cursor based)
-- [ ] Computed Fields
-- [ ] Search Users
+- [x] Computed Fields
+- [x] Search Users
 
 ## Photos
 

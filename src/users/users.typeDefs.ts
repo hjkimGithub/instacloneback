@@ -13,7 +13,12 @@ const typeDefs =  gql`
         avatar: String
         followings: [User]
         followers: [User]
+        totalFollowing: Int!
+        totalFollowers: Int!
+        isMe: Boolean!
+        isFollowing: Boolean!
     }
 `;
+
 
 export default typeDefs;
