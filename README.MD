@@ -16,8 +16,8 @@
 
 ## Photos
 
-- [ ] Upload Photo(Parse #)
-- [ ] See Photo
+- [x] Upload Photo(Parse #)
+- [x] See Photo
 - [ ] See Hashtags
 - [ ] Search Photos
 - [ ] Edit Photo
