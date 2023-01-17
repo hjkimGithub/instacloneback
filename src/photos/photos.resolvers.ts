@@ -16,7 +16,10 @@ const resolvers = {
                     some: {id}
                 }
             }
-        })
+        }),
+        likes: ({id}) => client.like.count({where: {
+            photoId: id
+        }}),
     },
     Hashtag: {
         photos: ({id}, {page}, {loggedInUser}) => {
@@ -35,7 +38,7 @@ const resolvers = {
                 }
             }
         })
-    }
+    },
 }
 
 export default resolvers;
