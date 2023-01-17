@@ -1,5 +1,6 @@
 import client from "../../client";
 import { protectedResolver } from "../../users/users.utils";
+import { processHashtags } from "../photos.utils";
 
 const resolvers = {
   Mutation: {
@@ -11,14 +12,7 @@ const resolvers = {
           // get or create Hashtags
           const hashtags = caption.match(/#[\w]+/g);
           // console.log(hashtags);
-          hashtagObjs = hashtags.map((hashtag) => ({
-            where: {
-              hashtag
-            },
-            create: {
-              hashtag
-            }
-          }))
+          hashtagObjs = processHashtags(caption);
           // console.log(hashtagObjs);
         }
         // save the photo WITH the parsed hashtags
