@@ -26,14 +26,18 @@
 - [x] See Feed
 - [x] See Photo Comments
 - [x] Delete Comment(Is Mine)
-- [ ] Is Mine(Delete Photo)
+- [x] Is Mine(Delete Photo)
 
 
 ## Comments
 
 - [x] Comment on Photo
-- [ ] Edit Comment
+- [x] Edit Comment
 - [x] Delete Comment(Is Mine)
+
+## Refactor
+
+- [ ] Mutation Responses
 
 ## Extras
 
