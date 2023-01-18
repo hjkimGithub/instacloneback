@@ -42,3 +42,11 @@
 ## Extras
 
 - [ ] S3 Image Upload
+
+## DMs
+
+- [ ] Create Room
+- [ ] See Room
+- [ ] See Rooms
+- [ ] Send Message
+- [ ] Realtime Messages
