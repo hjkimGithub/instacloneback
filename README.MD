@@ -24,7 +24,8 @@
 - [x] Like / Unlike Photo
 - [x] See Photo Likes
 - [x] See Feed
-- [ ] See Photo Comments
+- [x] See Photo Comments
+- [x] Delete Comment(Is Mine)
 - [ ] Is Mine(Delete Photo)
 
 
@@ -32,7 +33,7 @@
 
 - [x] Comment on Photo
 - [ ] Edit Comment
-- [ ] Delete Comment(Is Mine)
+- [x] Delete Comment(Is Mine)
 
 ## Extras
 
