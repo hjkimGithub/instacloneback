@@ -11,6 +11,7 @@ const typeDefs = gql`
     }
     type Room {
         id: Int!
+        unreadTotal: Int!
         users: [User]
         messages: [Message]
         createdAt: String!
