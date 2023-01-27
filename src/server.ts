@@ -13,14 +13,33 @@ const apollo = new ApolloServer({
   resolvers,
   typeDefs,
   // schema,
-  context: async ({req}) => {
+  context: async (ctx) => {
     // console.log(req.headers)
-    if(req) {
+    if(ctx.req) {
       return {
-        loggedInUser: await getUser(req.headers.token),
-      }
+        loggedInUser: await getUser(ctx.req.headers.token),
+      };
     }
-  }
+    else {
+      const {
+        connection: {context},
+      } = ctx;
+      return {
+        loggedInUser: context.loggedInUser,
+      };
+    }
+  },
+  subscriptions: {
+    onConnect: async ({token}:{token?:string}) => {
+      if (!token) {
+        throw new Error("You can't listen.");
+      }
+      const loggedInUser = await getUser(token);
+      return {
+        loggedInUser,
+      };
+    },
+  },
 });
 
 const PORT = process.env.PORT;
